@@ -6,9 +6,8 @@
   <title>Emma Pombo – Showjumping Rider</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
+ 
   <style>
-    /* ── TOKENS ─────────────────────────────────────────── */
     :root {
       --cream:   #f5f0e8;
       --ivory:   #faf7f2;
@@ -20,26 +19,23 @@
       --muted:   #7a6a5a;
       --white:   #ffffff;
     }
-
+ 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
+ 
     body {
       font-family: 'Outfit', sans-serif;
       background: var(--ivory);
       color: var(--text);
       overflow-x: hidden;
     }
-
-    /* ── TYPOGRAPHY ─────────────────────────────────────── */
+ 
     h1, h2, h3 {
       font-family: 'Playfair Display', serif;
       font-weight: 600;
       letter-spacing: 0.01em;
     }
-
-    /* ── NAV ─────────────────────────────────────────────── */
+ 
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -52,7 +48,7 @@
       backdrop-filter: blur(8px);
       transition: padding 0.3s;
     }
-
+ 
     .nav-brand {
       font-family: 'Playfair Display', serif;
       font-size: 1.1rem;
@@ -61,13 +57,13 @@
       letter-spacing: 0.06em;
       text-decoration: none;
     }
-
+ 
     .nav-links {
       display: flex;
       gap: 2.5rem;
       list-style: none;
     }
-
+ 
     .nav-links a {
       color: var(--cream);
       text-decoration: none;
@@ -78,10 +74,9 @@
       opacity: 0.85;
       transition: opacity 0.2s, color 0.2s;
     }
-
+ 
     .nav-links a:hover { opacity: 1; color: var(--gold-lt); }
-
-    /* ── HERO ────────────────────────────────────────────── */
+ 
     #home {
       position: relative;
       height: 100vh;
@@ -90,13 +85,13 @@
       align-items: flex-end;
       overflow: hidden;
     }
-
+ 
     .hero-bg {
       position: absolute;
       inset: 0;
       background: url('https://static.wixstatic.com/media/6d1834_64ac227aab844a829470866f9b862463~mv2.jpg') center/cover no-repeat;
     }
-
+ 
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -104,8 +99,7 @@
         linear-gradient(to top, rgba(8,16,10,0.88) 0%, rgba(8,16,10,0.55) 35%, rgba(8,16,10,0.1) 60%, transparent 100%),
         linear-gradient(to right, rgba(8,16,10,0.5) 0%, transparent 55%);
     }
-
-    /* Decorative horse silhouette */
+ 
     .hero-deco {
       position: absolute;
       right: 6%;
@@ -113,7 +107,7 @@
       width: 340px;
       opacity: 0.08;
     }
-
+ 
     .hero-content {
       position: relative;
       z-index: 2;
@@ -121,12 +115,9 @@
       max-width: 620px;
       animation: fadeUp 1.1s ease both;
     }
-
-    .hero-eyebrow,
-    .hero-sub {
-      text-shadow: 0 1px 8px rgba(0,0,0,0.6);
-    }
-
+ 
+    .hero-eyebrow, .hero-sub { text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
+ 
     .hero-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(3rem, 7vw, 5.5rem);
@@ -136,13 +127,13 @@
       margin-bottom: 1.2rem;
       text-shadow: 0 2px 16px rgba(0,0,0,0.55), 0 1px 4px rgba(0,0,0,0.4);
     }
-
+ 
     .hero-title em {
       font-style: italic;
       color: var(--gold-lt);
       text-shadow: 0 2px 16px rgba(0,0,0,0.55);
     }
-
+ 
     .hero-eyebrow {
       font-size: 0.7rem;
       letter-spacing: 0.2em;
@@ -151,7 +142,7 @@
       font-weight: 500;
       margin-bottom: 1rem;
     }
-
+ 
     .hero-sub {
       font-size: 0.82rem;
       letter-spacing: 0.15em;
@@ -160,7 +151,7 @@
       font-weight: 300;
       margin-bottom: 2.4rem;
     }
-
+ 
     .btn-primary {
       display: inline-block;
       padding: 0.85rem 2.2rem;
@@ -174,9 +165,9 @@
       text-decoration: none;
       transition: background 0.25s, transform 0.2s;
     }
-
+ 
     .btn-primary:hover { background: var(--gold-lt); transform: translateY(-2px); }
-
+ 
     .btn-outline {
       display: inline-block;
       padding: 0.85rem 2.2rem;
@@ -190,12 +181,11 @@
       text-decoration: none;
       transition: all 0.25s;
     }
-
+ 
     .btn-outline:hover { background: var(--gold); color: var(--green); }
-
-    /* ── SECTION BASE ────────────────────────────────────── */
+ 
     section { padding: 6rem 4rem; }
-
+ 
     .section-label {
       font-size: 0.68rem;
       letter-spacing: 0.22em;
@@ -204,7 +194,7 @@
       font-weight: 500;
       margin-bottom: 0.8rem;
     }
-
+ 
     .section-title {
       font-size: clamp(2rem, 4vw, 3.2rem);
       font-weight: 600;
@@ -212,8 +202,7 @@
       margin-bottom: 1.6rem;
       line-height: 1.15;
     }
-
-    /* ── ABOUT ───────────────────────────────────────────── */
+ 
     #about {
       background: var(--ivory);
       display: grid;
@@ -223,29 +212,17 @@
       max-width: 1200px;
       margin: 0 auto;
     }
-
-    .about-image-wrap {
-      position: relative;
-    }
-
+ 
+    .about-image-wrap { position: relative; }
+ 
     .about-photo {
       width: 100%;
       aspect-ratio: 3/4;
       object-fit: cover;
       display: block;
-      /* ➡ REPLACE: swap with: <img src="images/about.jpg"> */
       background: linear-gradient(135deg, #2e4a38, #4a3020);
     }
-
-    .about-photo-placeholder {
-      width: 100%;
-      aspect-ratio: 3/4;
-      background: linear-gradient(135deg, #2e4a38 0%, #4a3020 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
+ 
     .about-deco-line {
       position: absolute;
       top: -1.5rem;
@@ -255,14 +232,14 @@
       border: 1px solid var(--gold);
       pointer-events: none;
     }
-
+ 
     .about-text p {
       font-size: 0.92rem;
       line-height: 1.9;
       color: var(--muted);
       margin-bottom: 1.2rem;
     }
-
+ 
     .about-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -271,7 +248,7 @@
       padding-top: 2rem;
       border-top: 1px solid rgba(184,154,90,0.3);
     }
-
+ 
     .stat-num {
       font-family: 'Playfair Display', serif;
       font-size: 2.4rem;
@@ -279,29 +256,28 @@
       color: var(--green);
       display: block;
     }
-
+ 
     .stat-label {
       font-size: 0.58rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--muted);
     }
-
-    /* ── JOURNEY ─────────────────────────────────────────── */
+ 
     #journey {
       background: var(--green);
       color: var(--cream);
       text-align: center;
     }
-
+ 
     #journey .section-title { color: var(--cream); }
-
+ 
     .timeline {
       max-width: 700px;
       margin: 3rem auto 0;
       position: relative;
     }
-
+ 
     .timeline::before {
       content: '';
       position: absolute;
@@ -311,18 +287,18 @@
       background: rgba(184,154,90,0.35);
       transform: translateX(-50%);
     }
-
+ 
     .tl-item {
       display: flex;
       gap: 2rem;
       margin-bottom: 2.5rem;
       align-items: flex-start;
     }
-
+ 
     .tl-item:nth-child(odd) { flex-direction: row-reverse; text-align: right; }
-
+ 
     .tl-body { flex: 1; }
-
+ 
     .tl-year {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
@@ -331,9 +307,9 @@
       margin-bottom: 0.3rem;
       font-weight: 700;
     }
-
+ 
     .tl-body p { font-size: 0.8rem; color: rgba(245,240,232,0.7); line-height: 1.7; }
-
+ 
     .tl-dot {
       flex-shrink: 0;
       width: 10px; height: 10px;
@@ -343,48 +319,47 @@
       position: relative;
       z-index: 1;
     }
-
-    /* ── SPONSOR ─────────────────────────────────────────── */
+ 
     #sponsor {
       background: var(--cream);
       max-width: 1100px;
       margin: 0 auto;
     }
-
+ 
     .sponsor-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2.5rem;
       margin: 3rem 0;
     }
-
+ 
     .sponsor-card {
       border: 1px solid rgba(184,154,90,0.3);
       padding: 2.5rem 2rem;
       transition: border-color 0.25s, transform 0.25s;
     }
-
+ 
     .sponsor-card:hover { border-color: var(--gold); transform: translateY(-4px); }
-
+ 
     .sponsor-icon {
       width: 48px;
       height: 48px;
       margin-bottom: 1.2rem;
       opacity: 0.7;
     }
-
+ 
     .sponsor-card h3 {
       font-size: 1.3rem;
       color: var(--green);
       margin-bottom: 0.8rem;
     }
-
+ 
     .sponsor-card p {
       font-size: 0.78rem;
       color: var(--muted);
       line-height: 1.8;
     }
-
+ 
     .sponsor-cta {
       text-align: center;
       margin-top: 3rem;
@@ -393,35 +368,34 @@
       position: relative;
       overflow: hidden;
     }
-
+ 
     .sponsor-cta::before {
       content: '';
       position: absolute;
       inset: 0;
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b89a5a' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
-
+ 
     .sponsor-cta h2 {
       font-size: 2rem;
       color: var(--white);
       margin-bottom: 0.8rem;
     }
-
+ 
     .sponsor-cta p {
       font-size: 0.8rem;
       color: rgba(245,240,232,0.7);
       margin-bottom: 2rem;
       letter-spacing: 0.05em;
     }
-
-    /* ── CURRENT SPONSORS ────────────────────────────────── */
+ 
     .current-sponsors {
       text-align: center;
       padding: 3rem 0 0;
     }
-
+ 
     .current-sponsors .section-label { text-align: center; }
-
+ 
     .sponsor-logos {
       display: flex;
       justify-content: center;
@@ -430,89 +404,72 @@
       flex-wrap: wrap;
       margin-top: 1.5rem;
     }
-
-    .sponsor-logo-item {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1rem;
-      color: var(--muted);
-      letter-spacing: 0.05em;
-      font-weight: 500;
-    }
-
-    /* ── GALLERY ─────────────────────────────────────────── */
+ 
     #gallery {
       background: var(--text);
       padding: 5rem 2rem;
     }
-
+ 
     #gallery .section-label { text-align: center; }
     #gallery .section-title { text-align: center; color: var(--cream); }
-
+ 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: auto;
-      gap: 8px;
-      max-width: 1200px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      max-width: 1000px;
       margin: 2.5rem auto 0;
     }
-
+ 
     .gallery-item {
       overflow: hidden;
-      cursor: pointer;
+      border-radius: 4px;
     }
-
-    .gallery-item:first-child {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
-
-    .gallery-item:nth-child(4) {
+ 
+    .gallery-item.wide {
       grid-column: span 2;
     }
-
+ 
     .gallery-img {
       width: 100%;
       height: 100%;
-      min-height: 180px;
+      min-height: 220px;
       object-fit: cover;
       display: block;
       transition: transform 0.5s ease;
-      /* ➡ REPLACE each with <img src="images/galleryN.jpg"> */
     }
-
-    .gallery-img-placeholder {
+ 
+    .gallery-item:hover .gallery-img { transform: scale(1.03); }
+ 
+    .gallery-video {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+ 
+    .gallery-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      min-height: 180px;
-      background: linear-gradient(135deg, #2a3a2e, #3a2820);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(184,154,90,0.3);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.15em;
-      transition: transform 0.5s ease;
+      height: 100%;
+      border: 0;
     }
-
-    .gallery-item:first-child .gallery-img-placeholder { min-height: 380px; }
-
-    .gallery-item:hover .gallery-img-placeholder { transform: scale(1.04); }
-
-    /* ── CONTACT ─────────────────────────────────────────── */
+ 
     #contact {
       background: var(--ivory);
       text-align: center;
       padding: 5rem 2rem;
     }
-
+ 
     .social-links {
       display: flex;
       justify-content: center;
       gap: 1.5rem;
       margin: 2rem 0;
     }
-
+ 
     .social-link {
       display: flex;
       align-items: center;
@@ -526,10 +483,9 @@
       text-transform: uppercase;
       transition: all 0.25s;
     }
-
+ 
     .social-link:hover { background: var(--green); color: var(--cream); border-color: var(--green); }
-
-    /* ── FOOTER ──────────────────────────────────────────── */
+ 
     footer {
       background: var(--green);
       color: rgba(245,240,232,0.5);
@@ -539,47 +495,41 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
     }
-
+ 
     footer a { color: var(--gold); text-decoration: none; }
-
-    /* ── ANIMATIONS ──────────────────────────────────────── */
+ 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
+ 
     .reveal {
       opacity: 0;
       transform: translateY(28px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
-
+ 
     .reveal.visible { opacity: 1; transform: none; }
-
-    /* ── RESPONSIVE ──────────────────────────────────────── */
+ 
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { gap: 1.2rem; }
       .nav-links a { font-size: 0.6rem; }
-
       section { padding: 4rem 1.5rem; }
-
       #about {
         grid-template-columns: 1fr;
         gap: 3rem;
         padding: 4rem 1.5rem;
       }
-
       .sponsor-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-item:first-child { grid-column: span 2; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item.wide { grid-column: span 1; }
       .hero-content { padding: 0 1.5rem 4rem; }
     }
   </style>
 </head>
 <body>
-
-  <!-- ── NAV ── -->
+ 
   <nav>
     <a class="nav-brand" href="#home">Emma Pombo</a>
     <ul class="nav-links">
@@ -590,17 +540,13 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
-  <!-- ── HERO ── -->
+ 
   <section id="home">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
-
-    <!-- Horse silhouette SVG decoration -->
     <svg class="hero-deco" viewBox="0 0 200 180" fill="white" xmlns="http://www.w3.org/2000/svg">
       <path d="M180,60 C175,45 165,35 155,30 C158,25 162,18 160,10 C155,12 148,15 145,22 C138,18 128,16 118,17 C108,18 98,22 90,28 C80,22 68,20 55,24 C42,28 32,38 28,50 C20,52 12,58 8,68 C5,75 6,83 10,90 C6,95 4,102 5,110 C7,120 14,128 22,132 L22,160 L30,160 L30,132 C38,136 46,138 55,138 L55,160 L63,160 L63,138 C72,136 80,130 85,122 L95,122 C97,130 102,137 110,141 L110,160 L118,160 L118,141 C126,140 133,135 138,128 L145,128 C148,135 154,140 162,142 L162,160 L170,160 L170,138 C176,132 180,122 180,112 C185,105 188,95 186,85 C184,75 183,67 180,60 Z"/>
     </svg>
-
     <div class="hero-content">
       <p class="hero-eyebrow">Miami, Florida · Showjumping</p>
       <h1 class="hero-title">Emma<br /><em>Pombo</em></h1>
@@ -608,21 +554,18 @@
       <a class="btn-primary" href="#sponsor">Become a Sponsor</a>
     </div>
   </section>
-
-  <!-- ── ABOUT ── -->
+ 
   <section id="about" class="reveal">
     <div class="about-image-wrap">
       <img class="about-photo" src="https://static.wixstatic.com/media/39cc9a_817c0d34493a40948d28cca905ef233a~mv2.jpg" alt="Emma Pombo" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block;" />
       <div class="about-deco-line"></div>
     </div>
-
     <div class="about-text">
       <p class="section-label">About Emma</p>
       <h2 class="section-title">Meet the<br />Young Athlete</h2>
       <p>Emma Pombo was born and raised in Miami with a lifelong passion for horses. At just five years old she found her calling in showjumping — a sport that taught her discipline, trust, and resilience.</p>
       <p>Beyond competitions, Emma builds strong bonds with each horse she rides and embraces every challenge with joy and commitment. Balancing school and training, she represents a new generation of riders who compete with heart and humility.</p>
       <p>Her mission: to grow as an athlete and inspire others through courage, joy, and sportsmanship.</p>
-
       <div class="about-stats">
         <div>
           <span class="stat-num">8+</span>
@@ -639,12 +582,10 @@
       </div>
     </div>
   </section>
-
-  <!-- ── JOURNEY ── -->
+ 
   <section id="journey" class="reveal">
     <p class="section-label" style="text-align:center">The Path Forward</p>
     <h2 class="section-title">Her Journey</h2>
-
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-body">
@@ -654,7 +595,6 @@
         <div class="tl-dot"></div>
         <div style="flex:1"></div>
       </div>
-
       <div class="tl-item">
         <div style="flex:1"></div>
         <div class="tl-dot"></div>
@@ -663,7 +603,6 @@
           <p>First local competition in Miami — a milestone that confirmed her passion and drive to compete.</p>
         </div>
       </div>
-
       <div class="tl-item">
         <div class="tl-body">
           <div class="tl-year">Jul 2023</div>
@@ -672,7 +611,6 @@
         <div class="tl-dot"></div>
         <div style="flex:1"></div>
       </div>
-
       <div class="tl-item">
         <div style="flex:1"></div>
         <div class="tl-dot"></div>
@@ -681,7 +619,6 @@
           <p>Competed at World Equestrian Center (WEC) — one of the most prestigious equestrian venues in the U.S.</p>
         </div>
       </div>
-
       <div class="tl-item">
         <div class="tl-body">
           <div class="tl-year">Dec 2025</div>
@@ -690,7 +627,6 @@
         <div class="tl-dot"></div>
         <div style="flex:1"></div>
       </div>
-
       <div class="tl-item">
         <div style="flex:1"></div>
         <div class="tl-dot"></div>
@@ -701,12 +637,10 @@
       </div>
     </div>
   </section>
-
-  <!-- ── SPONSOR ── -->
+ 
   <section id="sponsor" class="reveal">
     <p class="section-label">Partner With Emma</p>
     <h2 class="section-title">Sponsorship<br />Opportunities</h2>
-
     <div class="sponsor-grid">
       <div class="sponsor-card">
         <svg class="sponsor-icon" viewBox="0 0 48 48" fill="none" stroke="#b89a5a" stroke-width="1.5">
@@ -716,7 +650,6 @@
         <h3>Training Partner</h3>
         <p>Support Emma's daily training through lesson fees, performance gear, or high-quality apparel. Align your brand with daily dedication and long-term goals.</p>
       </div>
-
       <div class="sponsor-card">
         <svg class="sponsor-icon" viewBox="0 0 48 48" fill="none" stroke="#b89a5a" stroke-width="1.5">
           <path d="M6 38 L24 10 L42 38 Z"/>
@@ -726,16 +659,11 @@
         <p>Cover key show expenses — entries, travel, and gear. Keep the focus on growth and achievement while showcasing your brand in the competitive equestrian arena.</p>
       </div>
     </div>
-
     <div class="sponsor-cta">
       <h2>Ready to Partner?</h2>
       <p>Every contribution directly fuels Emma's journey to international competition.</p>
-      <a class="btn-primary" href="https://donate.stripe.com/7sY28te6Q5XPfC02zlgMw00" target="_blank" rel="noopener">
-        Contribute Now via Stripe
-      </a>
+      <a class="btn-primary" href="https://donate.stripe.com/7sY28te6Q5XPfC02zlgMw00" target="_blank" rel="noopener">Contribute Now via Stripe</a>
     </div>
-
-    <!-- Current Sponsors -->
     <div class="current-sponsors">
       <p class="section-label">Current Sponsors</p>
       <div class="sponsor-logos">
@@ -745,31 +673,66 @@
       </div>
     </div>
   </section>
-
-  <!-- ── GALLERY ── -->
+ 
+  <!-- ── GALLERY — Updated with new photos + YouTube videos ── -->
   <section id="gallery">
     <p class="section-label">On the Field</p>
     <h2 class="section-title" style="color:var(--cream)">Gallery</h2>
-
+ 
     <div class="gallery-grid">
-      <div class="gallery-item"><img class="gallery-img" src="https://static.wixstatic.com/media/6d1834_3d22559c40ff4d048f77bcc8eba02f8af003.jpg" alt="Emma competing" /></div>
-      <div class="gallery-item"><img class="gallery-img" src="https://static.wixstatic.com/media/6d1834_1e550662827f43a4bc3f79a240303800~mv2.jpg" alt="Emma riding" /></div>
-      <div class="gallery-item"><img class="gallery-img" src="https://static.wixstatic.com/media/6d1834_4fa2ce5a678e4afabeb6f3ceb99b7c25f003.jpg" alt="Emma showjumping" /></div>
-      <div class="gallery-item"><img class="gallery-img" src="https://static.wixstatic.com/media/6d1834_bb958c5ce0e747bd9ed269afacfb3bd6~mv2.jpg" alt="Emma training" /></div>
-      <div class="gallery-item"><img class="gallery-img" src="https://static.wixstatic.com/media/6d1834_b2f691df9bb447b385a80838aebcf597f003.jpg" alt="Emma at competition" /></div>
-      <div class="gallery-item"><img class="gallery-img" src="https://static.wixstatic.com/media/6d1834_76048716b6ef41ce904cddc90df91c3c~mv2.jpg" alt="Emma with horse" /></div>
-      <div class="gallery-item"><img class="gallery-img" src="https://static.wixstatic.com/media/6d1834_626f8055d8ba4710baa53fff92ceaf37~mv2.jpg" alt="Emma riding" /></div>
+ 
+      <!-- Photo 1 — wide -->
+      <div class="gallery-item wide">
+        <img class="gallery-img" src="0d8e22c7-8468-4d60-a82f-88175a0653fd.jpg" alt="Emma Pombo competing" style="max-height:420px;" />
+      </div>
+ 
+      <!-- Video 1 -->
+      <div class="gallery-item">
+        <div class="gallery-video">
+          <iframe src="https://www.youtube.com/embed/SJupOlJX_pk" title="Emma Pombo showjumping" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+ 
+      <!-- Photo 2 -->
+      <div class="gallery-item">
+        <img class="gallery-img" src="b01853c9-9400-45f4-9630-c5bd5fdc657b.jpg" alt="Emma Pombo riding" style="height:280px;" />
+      </div>
+ 
+      <!-- Video 2 — wide -->
+      <div class="gallery-item wide">
+        <div class="gallery-video">
+          <iframe src="https://www.youtube.com/embed/mO3-a5qHg_E" title="Emma Pombo competition" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+ 
+      <!-- Photo 3 -->
+      <div class="gallery-item">
+        <img class="gallery-img" src="d40dc7b4-0969-440d-ad08-c8b3990c25d3.jpg" alt="Emma Pombo showjumping" style="height:280px;" />
+      </div>
+ 
+      <!-- Video 3 -->
+      <div class="gallery-item">
+        <div class="gallery-video">
+          <iframe src="https://www.youtube.com/embed/WmusDDcfKUQ" title="Emma Pombo training" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+ 
+      <!-- Video 4 — wide -->
+      <div class="gallery-item wide">
+        <div class="gallery-video">
+          <iframe src="https://www.youtube.com/embed/YEiqO0Nu5k4" title="Emma Pombo equestrian" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+ 
     </div>
   </section>
-
-  <!-- ── CONTACT ── -->
+ 
   <section id="contact" class="reveal">
     <p class="section-label">Get in Touch</p>
     <h2 class="section-title">Follow the Journey</h2>
     <p style="color:var(--muted);font-size:0.82rem;max-width:420px;margin:0 auto 1.5rem;line-height:1.8;text-align:center">
       Follow Emma's training and competition updates on social media, or reach out to discuss sponsorship partnerships.
     </p>
-
     <div class="social-links">
       <a class="social-link" href="https://www.instagram.com/emma.pombo.riding" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -790,18 +753,15 @@
         Sponsor Now
       </a>
     </div>
-
     <p style="color:var(--muted);font-size:0.68rem;letter-spacing:0.12em;margin-top:1rem">Miami, FL · USA</p>
   </section>
-
-  <!-- ── FOOTER ── -->
+ 
   <footer>
-    <p>© 2025 Emma Pombo Showjumping Rider &nbsp;·&nbsp; Miami, FL &nbsp;·&nbsp;
+    <p>&copy; 2026 Emma Pombo Showjumping Rider &nbsp;&middot;&nbsp; Miami, FL &nbsp;&middot;&nbsp;
       <a href="https://donate.stripe.com/7sY28te6Q5XPfC02zlgMw00" target="_blank">Become a Sponsor</a>
     </p>
   </footer>
-
-  <!-- ── SCROLL REVEAL ── -->
+ 
   <script>
     const reveals = document.querySelectorAll('.reveal');
     const io = new IntersectionObserver(entries => {
@@ -809,6 +769,6 @@
     }, { threshold: 0.12 });
     reveals.forEach(r => io.observe(r));
   </script>
-
+ 
 </body>
 </html>
