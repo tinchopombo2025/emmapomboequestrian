@@ -203,6 +203,20 @@
       line-height: 1.15;
     }
  
+    #next-show { padding: 3.5rem 1.5rem; background: var(--cream); }
+    .next-show-card { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem; align-items: center; padding: 2.5rem; border: 1px solid var(--gold); }
+    .next-show-date { padding: 1.5rem 1rem; background: var(--green); color: var(--cream); text-align: center; }
+    .next-show-date span { display: block; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; }
+    .next-show-date strong { display: block; margin: 0.35rem 0; font-family: 'Playfair Display', serif; font-size: 2.8rem; color: var(--gold-lt); }
+    .next-show-title { font-size: clamp(1.65rem, 3vw, 2.5rem); color: var(--green); line-height: 1.2; }
+    .next-show-location { margin-top: 1rem; color: var(--muted); font-size: 0.9rem; }
+    .next-show-logo { display: block; width: 280px; max-width: 100%; height: auto; margin-top: 1.25rem; }
+    @media (max-width: 600px) {
+      .next-show-card { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem; text-align: center; }
+      .next-show-date { padding: 1rem; }
+      .next-show-logo { margin: 1.25rem auto 0; }
+    }
+
     #about {
       background: var(--ivory);
       display: grid;
@@ -555,6 +569,27 @@
     </div>
   </section>
  
+  <!-- Temporary announcement: hide after the final show day in Wellington. -->
+  <section id="next-show" aria-labelledby="next-show-title" data-expires="2026-11-23T00:00:00-05:00">
+    <div class="next-show-card">
+      <div class="next-show-date" aria-label="November 18 through 22, 2026">
+        <span>November</span>
+        <strong>18–22</strong>
+        <span>2026</span>
+      </div>
+      <div>
+        <p class="section-label">Next Show</p>
+        <h2 id="next-show-title" class="next-show-title">SFHJA 76th Annual<br />Charity Horse Show</h2>
+        <p class="next-show-location">Wellington, Florida</p>
+        <img class="next-show-logo" src="wellington-international-logo.png" alt="Wellington International" width="1120" height="445" />
+      </div>
+    </div>
+  </section>
+  <script>
+    const nextShow = document.getElementById('next-show');
+    if (Date.now() >= Date.parse(nextShow.dataset.expires)) nextShow.hidden = true;
+  </script>
+
   <section id="about" class="reveal">
     <div class="about-image-wrap">
       <img class="about-photo" src="https://static.wixstatic.com/media/39cc9a_817c0d34493a40948d28cca905ef233a~mv2.jpg" alt="Emma Pombo" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block;" />
